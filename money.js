@@ -75,7 +75,7 @@
 		rates[fx.base] = 1;
 
 		// Throw an error if either rate isn't in the rates array
-		if ( !rates[to] || !rates[from] ) throw "fx error";
+		if ( !rates[to] || !rates[from] ) throw new Error("fx error");
 
 		// If `from` currency === fx.base, return the basic exchange rate for the `to` currency
 		if ( from === fx.base ) {
